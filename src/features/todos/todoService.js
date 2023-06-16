@@ -1,7 +1,9 @@
 import axios from "axios"
 
 
-// const URL = "http://localhost:5000/api/todos"
+const URL = "https://todo-app-backend-le2o.onrender.com"
+
+
 
 
 const getAllTodos = async (token) => {
@@ -10,7 +12,7 @@ const getAllTodos = async (token) => {
       Authorization: `Bearer ${token}`
     }
   }
-  const response = await axios.get("http://localhost:5000/api/todos/getAll",config)
+  const response = await axios.get(URL + "/api/todos/getAll",config)
 
   return response.data.todo
 }
@@ -21,7 +23,7 @@ const getActive = async (token) => {
       Authorization: `Bearer ${token}`
     }
   }
-  const response = await axios.get("http://localhost:5000/api/todos/getActive",config)
+  const response = await axios.get(URL + "/api/todos/getActive",config)
 
   return response.data.todo
 }
@@ -32,7 +34,7 @@ const getCompleted = async (token) => {
       Authorization: `Bearer ${token}`
     }
   }
-  const response = await axios.get("http://localhost:5000/api/todos/getCompleted",config)
+  const response = await axios.get(URL + "/api/todos/getCompleted",config)
 
   return response.data.todo
 }
@@ -43,7 +45,7 @@ const createTodo = async (token,formData) => {
       Authorization: `Bearer ${token}`
     }
   }
-  const response = await axios.post("http://localhost:5000/api/todos/create",formData,config)
+  const response = await axios.post(URL + "/api/todos/create",formData,config)
 
   return response.data.todo
 }
@@ -54,7 +56,7 @@ const updateTodo = async (token,formData) => {
       Authorization: `Bearer ${token}`
     }
   }
-  const response = await axios.put(`http://localhost:5000/api/todos/update/${formData.id}`,formData,config)
+  const response = await axios.put(URL + `/api/todos/update/${formData.id}`,formData,config)
   return response.data.todo
 }
 
@@ -64,7 +66,7 @@ const deleteTodo = async (token,id) => {
       Authorization: `Bearer ${token}`
     }
   }
-  const response = await axios.delete(`http://localhost:5000/api/todos/delete/${id}`,config)
+  const response = await axios.delete(URL + `/api/todos/delete/${id}`,config)
 
   console.log(response.data)
 
@@ -79,7 +81,7 @@ const deleteAllTodo = async (token) => {
     }
   }
 
-  const response = await axios.delete(`http://localhost:5000/api/todos/deleteAll`,config)
+  const response = await axios.delete(URL + `/api/todos/deleteAll`,config)
 
 
   return response.data

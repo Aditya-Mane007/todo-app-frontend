@@ -1,9 +1,9 @@
 import axios from "axios"
 
-// const URL = "http://localhost:5000"
+const URL = "https://todo-app-backend-le2o.onrender.com"
 
 const registerUser = async (formData) => {
-  const response = await axios.post("http://localhost:5000/api/user/register",formData)
+  const response = await axios.post(URL + "/api/user/register",formData)
 
   if (response.data) {
     localStorage.setItem("User",JSON.stringify(response.data))
@@ -13,7 +13,7 @@ const registerUser = async (formData) => {
 }
 
 const loginUser = async (formData) => {
-  const response = await axios.post("http://localhost:5000/api/user/login",formData)
+  const response = await axios.post(URL + "/api/user/login",formData)
 
   if (response.data) {
     localStorage.setItem("User",JSON.stringify(response.data))
