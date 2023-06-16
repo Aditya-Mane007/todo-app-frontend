@@ -144,7 +144,7 @@ svg {
   outline: none;
   border: none;
   padding: 0rem 1rem;
-  background-color: var(--text);
+  background-color: white;
 }
 .form-control .btn {
   cursor: pointer;
