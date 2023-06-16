@@ -65,7 +65,7 @@ const TodoFrom = () => {
       <div className="form-control">
         <input
           type="submit"
-          value={current ? "Update Todo" : "Add Tood"}
+          value={current ? "Update Todo" : "Add Todo"}
           className="btn"
           style={{ margin: ".5rem 0rem" }}
         />
