@@ -269,6 +269,7 @@ svg {
 .todo-complete .todo-text-complete {
   width: 100%;
   text-decoration: line-through;
+  color: var(--text);
   /* background-color: #25273c; */
 }
 .update {
