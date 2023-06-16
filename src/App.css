@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  color-scheme: light dark;
+}
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+/* :root {
+  /* ### Primary */
+/* --BrightBlue: hsl(220, 98%, 61%); */
+/* --CheckBackground: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%)), */
+/* ### Neutral */
+
+/* ### Light Theme */
+/* --VeryLightGray: hsl(0, 0%, 98%);
+  --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+  --LightGrayishBlue: hsl(233, 11%, 84%);
+  --DarkGrayishBlue: hsl(236, 9%, 61%); */
+/* --VeryDarkGrayishBlue: hsl(235, 19%, 35%); */
+
+/* ### Dark Theme */
+/* --VeryDarkBlue: hsl(235, 21%, 11%);
+  --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+  --LightGrayishBlue: hsl(234, 39%, 85%);
+  --LightGrayishBlueHover: hsl(236, 33%, 92%);
+  --DarkGrayishBlue: hsl(234, 11%, 52%);
+  --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+  --VeryDarkGrayishBlue: hsl(237, 14%, 26%); */
+/* } */
+.light-mode {
+  --BrightBlue: hsl(220, 98%, 61%);
+  --Background: #fafafa;
+
+  /* --VeryLightGray: #fafafa; */
+  --VeryLightGrayishBlue: #e4e5f1;
+  --LightGrayishBlue: #d2d3db;
+  --DarkGrayishBlue: #9394a5;
+}
+.dark-mode {
+  --BrightBlue: hsl(220, 98%, 61%);
+  --Background: #161722;
+
+  /* --VeryDarkBlue: #161722; */
+  --VeryDarkDesaturatedBlue: #25273c;
+  --LightGrayishBlue: #cacde8;
+  --LightGrayishBlueHover: #e4e5f1;
+  --DarkGrayishBlue: #777a92;
+  --VeryDarkGrayishBlue: #4d5066;
+  --VeryDarkGrayishBlue: #393a4c;
+}
+body {
+  background: var(--Background);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.app-light {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/bg-desktop-light.jpg");
+  background-size: 100% 350px;
+  background-repeat: no-repeat;
+}
+.app-dark {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/bg-desktop-dark.jpg");
+  background-size: 100% 350px;
+  background-repeat: no-repeat;
+}
+.navbar {
+  width: 90%;
+  height: 50px;
+  margin: auto;
+  padding: 4rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  /* background-color: aqua; */
+  /* color: var(--BrightBlue); */
+}
+.logo {
+  font-size: 20px;
+}
+.nav-links {
+  display: flex;
+}
+.nav-link {
+  width: auto;
+  margin: 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+.home {
+  position: relative;
+  width: 90vw;
+  display: flex;
+  height: auto;
+  margin: auto;
+  align-items: flex-start;
+}
+.home > div {
+  width: 50%;
+  height: auto;
+
+  /* background-color: aqua; */
+  /* margin: 2rem 0rem; */
+}
+
+.todo-form {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.form-control {
+  width: 100%;
+  margin: 1rem 0rem;
+  /* color: gray; */
+}
+.form-control label {
+  display: block;
+  margin: 1rem 0rem;
+  color: #dfdddd;
+  font-size: 20px;
+}
+.form-control input {
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 0rem 1rem;
+}
+.form-control .btn {
+  cursor: pointer;
+  background: linear-gradient(
+    30deg,
+    rgba(192, 88, 243, 1) 33%,
+    rgba(87, 221, 255, 1) 88%
+  );
+  color: white;
+  outline: black 5px;
+}
+.form-control h3 {
+  text-align: center;
+  color: #d2d3db;
+}
+
+.form-control a {
+  color: #d2d3db;
+}
+.register {
+  width: 90%;
+  margin: auto;
+}
+.register h1 {
+  text-align: center;
+  color: #dfdddd;
+}
+.register > div {
+  width: 50%;
+  margin: auto;
+}
+
+.btn {
+  width: auto;
+  padding: 1rem;
+  /* margin: 0rem 0.5rem; */
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding: 0.5rem;
+  /* color: black; */
+  background-color: white;
+  border-radius: 5px;
+}
+.filter > div {
+  margin: 0rem 0.5rem;
+  cursor: pointer;
+}
+.filters {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.filters > li {
+  margin: 0.5rem;
+}
+.todo {
+  height: 50px;
+  background-color: white;
+  margin: 0.5rem 0rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rem 1rem;
+}
+
+.todo-complete {
+  height: 50px;
+  background-color: rgb(241, 241, 241);
+  margin: 0.5rem 0rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0rem 1rem;
+}
+
+.isComplete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.complete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(
+    30deg,
+    rgba(192, 88, 243, 1) 33%,
+    rgba(87, 221, 255, 1) 88%
+  );
+  cursor: pointer;
+}
+
+.todo .todo-text {
+  width: 100%;
+}
+
+.todo-complete .todo-text-complete {
+  width: 100%;
+  text-decoration: line-through;
+  /* background-color: #25273c; */
+}
+.update {
+  font-size: x-large;
+  margin: 0rem 1rem;
+  cursor: pointer;
+}
+.spinner {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px dotted var(--Background);
+  border-style: solid solid dotted dotted;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px dotted var(--Background);
+  border-style: solid solid dotted;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: rotationBack 1s linear infinite;
+  transform-origin: center center;
+}
+
+.todos-section {
+  margin-top: 3rem;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@media screen and (max-width: 1020px) {
+  .app-light {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/bg-desktop-light.jpg");
+    background-size: 100% 350px;
+    background-repeat: no-repeat;
+  }
+  .app-dark {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/bg-desktop-dark.jpg");
+    background-size: 100% 350px;
+    background-repeat: no-repeat;
+  }
+  .navbar {
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    /* background-color: aqua; */
+  }
+  .form-control input {
+    width: 90%;
+  }
+  .todos-section {
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .app-light {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/bg-mobile-light.jpg");
+    background-size: 100% 400px;
+    background-repeat: no-repeat;
+  }
+  .app-dark {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/bg-mobile-dark.jpg");
+    background-size: 100% 400px;
+    background-repeat: no-repeat;
+  }
+  .navbar {
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    padding: 4rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    /* background-color: aqua; */
+  }
+  .home {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .home > div {
+    width: 100%;
+  }
+  .form-control {
+    width: 100%;
+  }
+  .register {
+    width: 90%;
+    /* margin: auto; */
+  }
+  .register > div {
+    width: 90%;
+    margin: auto;
+  }
+  .todo-form {
+    width: 90%;
+    position: relative;
+    top: 0;
+  }
+  .form-control input {
+    width: 100%;
+  }
+  .todos-section {
+    margin-top: 1rem;
+  }
+}
