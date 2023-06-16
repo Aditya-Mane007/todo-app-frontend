@@ -32,6 +32,7 @@
 .light-mode {
   --BrightBlue: hsl(220, 98%, 61%);
   --Background: #fafafa;
+  --text: Black;
 
   /* --VeryLightGray: #fafafa; */
   --VeryLightGrayishBlue: #e4e5f1;
@@ -41,7 +42,7 @@
 .dark-mode {
   --BrightBlue: hsl(220, 98%, 61%);
   --Background: #161722;
-
+  --text:Black
   /* --VeryDarkBlue: #161722; */
   --VeryDarkDesaturatedBlue: #25273c;
   --LightGrayishBlue: #cacde8;
@@ -190,9 +191,10 @@ svg {
   align-items: center;
   height: auto;
   padding: 0.5rem;
-  /* color: black; */
+  color: var(--text);
   background-color: white;
   border-radius: 5px;
+  color: var(--text);
 }
 .filter > div {
   margin: 0rem 0.5rem;
@@ -216,6 +218,7 @@ svg {
   justify-content: flex-start;
   align-items: center;
   padding: 0rem 1rem;
+  color: var(--text);
 }
 
 .todo-complete {
@@ -260,6 +263,7 @@ svg {
 
 .todo .todo-text {
   width: 100%;
+  color: var(--text);
 }
 
 .todo-complete .todo-text-complete {
