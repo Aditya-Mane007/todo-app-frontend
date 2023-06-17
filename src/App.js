@@ -26,8 +26,8 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="https://todo-app-9us2.onrender.com/register" element={<Register />} />
-          <Route path='https://todo-app-9us2.onrender.com/login' element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       </div >
       <ToastContainer />
