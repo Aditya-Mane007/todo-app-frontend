@@ -39,7 +39,7 @@ const Todo = ({ todo }) => {
           dispatch(setCurrentState(todo))
         }}
       >
-        <BsPencilSquare />
+        <BsPencilSquare style={{ color: "black" }} />
       </div>
       <div className="delete">
         <img
